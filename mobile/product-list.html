@@ -1,467 +1,447 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="zh-cn">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
+  
+  <meta charset="UTF-8">
   <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1348.17">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Heiti SC Light'}
-    span.s1 {font: 12.0px 'Heiti SC Light'}
-    span.s2 {font: 12.0px Helvetica}
-    span.Apple-tab-span {white-space:pre}
-  </style>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="applicable-device"content="mobile">
+  <meta name="format-detection" content="telephone=no">
+  
+  <link rel="icon" href="http://website.wannar.com/images/logo/wannar_16.ico" type="image/ico">
+  <link rel="shortcut icon" href="http://website.wannar.com/images/logo/wannar_16.ico">
+  
+  <link rel="stylesheet" href="http://m.wannar.com/css/header_footer.css">
+  
+  <link rel="stylesheet" href="/javascript/icheck/skins/all.css">
+	
+	<style type="text/css">
+		body{ padding: 0; margin: 0;}
+		/* 背景遮盖 */ 
+		.background-cover{display: none; position: fixed; top: 0; left: 0; z-index: 2; width: 100%; height: 100%; background-color: #000; filter: alpha(opacity=80);-moz-opacity: 0.8;opacity: 0.8;}
+		.select-menu{display: none; position: fixed; left: 0; bottom: 0; z-index: 3; width: 100%; height: 460px; background-color: #fafbfd; font-size: 20px; color: grey;}
+		.sort-menu{display: none; position: fixed; left: 0; bottom: 0; z-index: 3; width: 100%; height: 240px; background-color: #fafbfd; text-align: center; font-size: 20px; color: grey;}
+		/* 产品列表 */ 
+		.product-tips{height: 280px; text-align: center; margin: 0 15px 10px 15px ; background-color: white;}
+		.product-pic-label{height: 35px; position: absolute; left:0; width:100%; bottom: 0;}
+		
+		/* tab列表 */ 
+		ul.tabs{width: 20%; float: left; list-style: none; padding: 0; height: 400px; margin:0; text-align: center;}
+		ul.tabs li.normal, ul.tabs li.active{height: 100px; width: 100%;}
+		ul.tabs li.normal{background-color: #f9fbfc;}
+		ul.tabs li.active{background-color: #ebebf0;}
+		 
+		/* 排序按钮变化 */
+		.sort-button, .sort-button-selected{height:60px; border-bottom: 1px solid grey; line-height: 60px;}
+		.sort-button-selected{background-color: #ebebf0;}
+				
+	</style>
+  
+  
 </head>
+
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="zh-cn"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="keywords" content="" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="" /&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="HandheldFriendly" content="true"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="MobileOptimized" content="width"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="apple-mobile-web-app-status-bar-style" content="black"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="applicable-device"content="mobile"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="format-detection" content="telephone=no"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="icon" href="http://website.wannar.com/images/logo/wannar_16.ico" type="image/ico"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="shortcut icon" href="http://website.wannar.com/images/logo/wannar_16.ico"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="http://m.wannar.com/css/header_footer.css"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="/javascript/icheck/skins/all.css"&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span>&lt;style type="text/css"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>body{ padding: 0; margin: 0;}</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>/* <span class="s1">背景遮盖</span> */<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>.background-cover{display: none; position: fixed; top: 0; left: 0; z-index: 2; width: 100%; height: 100%; background-color: #000; filter: alpha(opacity=80);-moz-opacity: 0.8;opacity: 0.8;}</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>.select-menu{display: none; position: fixed; left: 0; bottom: 0; z-index: 3; width: 100%; height: 460px; background-color: #fafbfd; font-size: 20px; color: grey;}</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>.sort-menu{display: none; position: fixed; left: 0; bottom: 0; z-index: 3; width: 100%; height: 240px; background-color: #fafbfd; text-align: center; font-size: 20px; color: grey;}</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>/* <span class="s1">产品列表</span> */<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>.product-tips{height: 280px; text-align: center; margin: 0 15px 10px 15px ; background-color: white;}</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>.product-pic-label{height: 35px; position: absolute; left:0; width:100%; bottom: 0;}</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>/* tab<span class="s1">列表</span> */<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>ul.tabs{width: 20%; float: left; list-style: none; padding: 0; height: 400px; margin:0; text-align: center;}</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>ul.tabs li.normal, ul.tabs li.active{height: 100px; width: 100%;}</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>ul.tabs li.normal{background-color: #f9fbfc;}</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>ul.tabs li.active{background-color: #ebebf0;}</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>/* <span class="s1">排序按钮变化</span> */</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>.sort-button, .sort-button-selected{height:60px; border-bottom: 1px solid grey; line-height: 60px;}</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>.sort-button-selected{background-color: #ebebf0;}</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span>&lt;/style&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- <span class="s1">头部和搜索框</span> --&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="layer header"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="/city-select.php" target="_self"&gt;&lt;div class="current-city"&gt;<span class="s1">纽约</span>&lt;/div&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sidebar-btn"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="search-bar"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="search-btn"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="search-input"&gt;&lt;input type="text"placeholder="<span class="s1">城市、景点、团号</span>"&gt;&lt;/div&gt; <span class="Apple-converted-space">     </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- <span class="s1">面包屑导航</span> --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="layer bread-crumb-layer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;ol class="list-unstyled bread-crumb" vocab="http://schema.org/" typeof="BreadcrumbList"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;li property="itemListElement" typeof="ListItem"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a property="item" typeof="WebPage" href="/"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span property="name"&gt;<span class="s1">首页</span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;meta property="position" content="1"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;li&gt;›&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;li property="itemListElement" typeof="ListItem"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a property="item" typeof="WebPage" href="/city-select.php"&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span property="name"&gt;<span class="s1">城市列表</span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;meta property="position" content="2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;li&gt;›&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;li property="itemListElement" typeof="ListItem"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a property="item" typeof="WebPage" href="/city/new-york"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span property="name"&gt;<span class="s1">纽约</span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;meta property="position" content="3"&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/ol&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span>&lt;!-- <span class="s1">以下是我的任务</span> --&gt; <span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span>&lt;div&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span> <span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;!-- <span class="s1">产品列表</span> --&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="productlist" style=""&gt;<span class="Apple-tab-span">	</span><span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-tips"&gt;<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-pic" style="height: 180px; background:url(http://website.wannar.com/images/app/city_list/46_m.jpg?v=1) no-repeat; background-size: cover; position: relative;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="position:absolute; top:0; right:15px;"&gt;&lt;img src="http://website.wannar.com/images/gui/discount_90.png" width="70%" height="70%"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-pic-label" style="background-color:#8f8f92; filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">            </span>&lt;div class="product-pic-label" style="background-color:transparent;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">            </span>&lt;div class="pic-words"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;span style="padding: 12px 0 10px 10px; float: left; color: white; font-size: 12px;"&gt;NY4-20 <span class="s1">周二、周三、周五发团</span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;span style="padding: 10px 10px 10px 0; float: right; color: white; font-size: 14px;"&gt;<span class="s1">纽约出发</span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">            </span>&lt;/div&gt; <span class="Apple-converted-space">           </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- product-tips END --&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-title" style="height: 30px; margin: 5px; border-bottom: 1px solid #d3d3dd;line-height:30px;font-size:14px;text-align: left;"&gt;</p>
-<p class="p3"><span class="s2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>奥兰多主题乐园任选三日（接送站）</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- product-title END --&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-info" style="height: 70px; padding-bottom: 2px;display: table;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-price-left"style="height: 50px;line-height:50px; text-align: center; color:#ff3573; width: 39%; float: left; border-right: 2px solid #d3d3dd; display: table-cell;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;span style="font-size: 24px;"&gt;$113.8&lt;span&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;span style="font-size: 10px"&gt;/<span class="s1">人起</span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-price-right" style="height: 60px; width: 60%; float: right; text-align: left;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="padding:2px 8px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span> <span class="Apple-converted-space">              <span class="Apple-tab-span">	</span></span>&lt;div style="font-size: 4px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">接机</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">                </span>&lt;div style="font-size: 4px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">配房</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">                </span>&lt;div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">二送一</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">                </span>&lt;div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">返点</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">                </span>&lt;div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">兑换</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- product-info END --&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- product-tips END --&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-tips" style="height: 280px; text-align: center; margin: 0 15px 10px 15px ; background-color: white;"&gt;<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-pic" style="height: 180px; background:url(http://website.wannar.com/images/app/city_list/46_m.jpg?v=1) no-repeat; background-size: cover; position: relative;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="position:absolute; top:0; right:15px;"&gt;&lt;img src="http://website.wannar.com/images/gui/discount_90.png" width="70%" height="70%"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-pic-label" style="height: 35px; position: absolute; left:0; width:100%; bottom: 0; background-color:#8f8f92;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">            </span>&lt;div class="product-pic-label" style="height: 35px; position: absolute; left:0; width:100%; bottom: 0; background-color:transparent;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">            </span>&lt;div class="pic-words"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;span style="padding: 12px 0 10px 10px; float: left; color: white; font-size: 12px;"&gt;NY4-20 <span class="s1">周二、周三、周五发团</span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;span style="padding: 10px 10px 10px 0; float: right; color: white; font-size: 14px;"&gt;<span class="s1">纽约出发</span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">            </span>&lt;/div&gt; <span class="Apple-converted-space">           </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- product-tips END --&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-title" style="height: 30px; margin: 5px; border-bottom: 1px solid #d3d3dd;line-height:30px;font-size:14px;text-align: left;"&gt;</p>
-<p class="p3"><span class="s2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>奥兰多主题乐园任选三日（接送站）</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- product-title END --&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-info" style="height: 70px; padding-bottom: 2px;display: table;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-price-left"style="height: 50px;line-height:50px; text-align: center; color:#ff3573; width: 39%; float: left; border-right: 2px solid #d3d3dd; display: table-cell;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;span style="font-size: 24px;"&gt;$113.8&lt;span&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;span style="font-size: 10px"&gt;/<span class="s1">人起</span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-price-right" style="height: 60px; width: 60%; float: right; text-align: left;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="padding:2px 8px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span> <span class="Apple-converted-space">              <span class="Apple-tab-span">	</span></span>&lt;div style="font-size: 4px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">接机</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">                </span>&lt;div style="font-size: 4px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">配房</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">                </span>&lt;div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">二送一</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">                </span>&lt;div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">返点</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">                </span>&lt;div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">兑换</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- product-info END --&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- product-tips END --&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-tips" style="height: 280px; text-align: center; margin: 0 15px 10px 15px ; background-color: white;"&gt;<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-pic" style="height: 180px; background:url(http://website.wannar.com/images/app/city_list/46_m.jpg?v=1) no-repeat; background-size: cover; position: relative;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="position:absolute; top:0; right:15px;"&gt;&lt;img src="http://website.wannar.com/images/gui/discount_90.png" width="70%" height="70%"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-pic-label" style="height: 35px; position: absolute; left:0; width:100%; bottom: 0; background-color:#8f8f92;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">            </span>&lt;div class="product-pic-label" style="height: 35px; position: absolute; left:0; width:100%; bottom: 0; background-color:transparent;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">            </span>&lt;div class="pic-words"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;span style="padding: 12px 0 10px 10px; float: left; color: white; font-size: 12px;"&gt;NY4-20 <span class="s1">周二、周三、周五发团</span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;span style="padding: 10px 10px 10px 0; float: right; color: white; font-size: 14px;"&gt;<span class="s1">纽约出发</span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">            </span>&lt;/div&gt; <span class="Apple-converted-space">           </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- product-tips END --&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-title" style="height: 30px; margin: 5px; border-bottom: 1px solid #d3d3dd;line-height:30px;font-size:14px;text-align: left;"&gt;</p>
-<p class="p3"><span class="s2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>奥兰多主题乐园任选三日（接送站）</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- product-title END --&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-info" style="height: 70px; padding-bottom: 2px;display: table;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-price-left"style="height: 50px;line-height:50px; text-align: center; color:#ff3573; width: 39%; float: left; border-right: 2px solid #d3d3dd; display: table-cell;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;span style="font-size: 24px;"&gt;$113.8&lt;span&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;span style="font-size: 10px"&gt;/<span class="s1">人起</span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-price-right" style="height: 60px; width: 60%; float: right; text-align: left;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="padding:2px 8px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span> <span class="Apple-converted-space">              <span class="Apple-tab-span">	</span></span>&lt;div style="font-size: 4px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">接机</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">                </span>&lt;div style="font-size: 4px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">配房</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">                </span>&lt;div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">二送一</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">                </span>&lt;div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">返点</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">                </span>&lt;div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">兑换</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- product-info END --&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- product-tips END --&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-tips" style="height: 280px; text-align: center; margin: 0 15px 10px 15px ; background-color: white;"&gt;<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-pic" style="height: 180px; background:url(http://website.wannar.com/images/app/city_list/46_m.jpg?v=1) no-repeat; background-size: cover; position: relative;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="position:absolute; top:0; right:15px;"&gt;&lt;img src="http://website.wannar.com/images/gui/discount_90.png" width="70%" height="70%"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-pic-label" style="height: 35px; position: absolute; left:0; width:100%; bottom: 0; background-color:#8f8f92;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">            </span>&lt;div class="product-pic-label" style="height: 35px; position: absolute; left:0; width:100%; bottom: 0; background-color:transparent;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">            </span>&lt;div class="pic-words"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;span style="padding: 12px 0 10px 10px; float: left; color: white; font-size: 12px;"&gt;NY4-20 <span class="s1">周二、周三、周五发团</span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;span style="padding: 10px 10px 10px 0; float: right; color: white; font-size: 14px;"&gt;<span class="s1">纽约出发</span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">            </span>&lt;/div&gt; <span class="Apple-converted-space">           </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- product-tips END --&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-title" style="height: 30px; margin: 5px; border-bottom: 1px solid #d3d3dd;line-height:30px;font-size:14px;text-align: left;"&gt;</p>
-<p class="p3"><span class="s2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>奥兰多主题乐园任选三日（接送站）</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- product-title END --&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-info" style="height: 70px; padding-bottom: 2px;display: table;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-price-left"style="height: 50px;line-height:50px; text-align: center; color:#ff3573; width: 39%; float: left; border-right: 2px solid #d3d3dd; display: table-cell;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;span style="font-size: 24px;"&gt;$113.8&lt;span&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;span style="font-size: 10px"&gt;/<span class="s1">人起</span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="product-price-right" style="height: 60px; width: 60%; float: right; text-align: left;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="padding:2px 8px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span> <span class="Apple-converted-space">              <span class="Apple-tab-span">	</span></span>&lt;div style="font-size: 4px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">接机</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">                </span>&lt;div style="font-size: 4px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">配房</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">                </span>&lt;div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">二送一</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">                </span>&lt;div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">返点</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">                </span>&lt;div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;"&gt;<span class="s1">兑换</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- product-info END --&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- product-tips END --&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- productlist END --&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;!-- <span class="s1">产品列表结束</span> --&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>&lt;!-- <span class="s1">底部的筛选排序按钮</span> --&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="menu-cover" style="height: 40px; position: fixed; left: 0; width: 100%; bottom: 0; background-color: #ff3573; filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8; background-color: #ff3573;"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="menu-cover" style="height: 40px; position: fixed; left: 0; width: 100%; bottom: 0; background-color: transparent;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="menu-button"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="button" for="select" style="height: 40px; line-height: 40px; width: 50%; float: left; color: white; font-size: 20px; text-align: center; border-right: 2px white solid;"&gt;<span class="s1">筛选</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="button" for="sort" style="height: 40px; line-height:40px; width: 49%; float: right; color: white; font-size: 20px; text-align: center;"&gt;<span class="s1">排序</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;!-- <span class="s1">底部的筛选排序按钮结束</span> --&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="background-cover"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;!-- <span class="s1">排序的菜单栏</span> --&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="sort-menu"&gt;<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="sort-button" style="height: 60px; line-height: 60px; border-bottom: 1px solid grey;"&gt;<span class="s1">天数从低到高</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="sort-button" style="height: 60px; line-height: 60px; border-bottom: 1px solid grey;"&gt;<span class="s1">天数从高到低</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="sort-button" style="height: 60px; line-height: 60px; border-bottom: 1px solid grey;"&gt;<span class="s1">价格从低到高</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="sort-button" style="height: 60px; line-height: 60px;"&gt;<span class="s1">价格从高到低</span>&lt;/div&gt;<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;!-- <span class="s1">排序的菜单栏结束</span> --&gt;<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;!-- <span class="s1">选择菜单栏</span> --&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="select-menu"&gt;<span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="select-menu-top" style="height: 60px; border-bottom: 1px solid grey;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;table style="width: 100%; font-size: 28px; padding: 0 20px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;td id="select-cancle" style="height: 58px; width: 30%;"&gt;<span class="s1">取消</span>&lt;/td&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;td style="height: 58px; width: 40%; text-align: center;"&gt;&lt;img src="/img/task/reload.png" height="25"; width="25"&gt;<span class="s1">重置</span>&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;td id="select-submit" style="height: 58px; width: 30%; text-align: right; color: #ff3573"&gt;<span class="s1">确定</span>&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/table&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- select-menu-top END --&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="container" style="overflow: auto;"&gt;<span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;ul class="tabs"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;li class="active"&gt;&lt;a href="#tab-days"&gt;&lt;img src="/img/task/days.png" height="100"; width="100"&gt;&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;li class="normal"&gt;&lt;a href="#tab-time"&gt;&lt;img src="/img/task/time.png" height="100"; width="100"&gt;&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;li class="normal"&gt;&lt;a href="#tab-service"&gt;&lt;img src="/img/task/service.png" height="100"; width="100"&gt;&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;li class="normal"&gt;&lt;a href="#tab-discount"&gt;&lt;img src="/img/task/discount.png" height="100"; width="100"&gt;&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/ul&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="tab-container" style="width: 80%; float: right; font-size: 18px;"&gt;<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div id="tab-days" class="tab-content" style="height: 400px; padding: 0 20px 0 40px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">不限</span>&lt;input type="radio" name="daysCheck" value="<span class="s1">不限</span>" checked="checked"&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">一天</span>&lt;input type="radio" name="daysCheck" value="<span class="s1">一天</span>"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">两天</span>&lt;input type="radio" name="daysCheck" value="<span class="s1">两天</span>"&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">三天</span>&lt;input type="radio" name="daysCheck" value="<span class="s1">三天</span>"&gt; <span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">四天</span>&lt;input type="radio" name="daysCheck" value="<span class="s1">四天</span>"&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">五天</span>&lt;input type="radio" name="daysCheck" value="<span class="s1">五天</span>"&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">六天</span>&lt;input type="radio" name="daysCheck" value="<span class="s1">六天</span>"&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">天数区间</span>&lt;input type="text" name="fday"&gt;-&lt;input type="text" name="lday"&gt; <span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- tab-days END --&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div id="tab-time" class="tab-content" style="height: 400px; padding: 0 20px 0 40px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">不限</span>&lt;input type="radio" name="timeCheck" value="<span class="s1">不限</span>"&gt;<span class="Apple-converted-space">   </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">星期一</span>&lt;input type="radio" name="timeCheck" value="<span class="s1">星期一</span>"&gt; <span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">星期二</span>&lt;input type="radio" name="timeCheck" value="<span class="s1">星期二</span>"&gt;<span class="Apple-converted-space">   </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">星期三</span>&lt;input type="radio" name="timeCheck" value="<span class="s1">星期三</span>"&gt; <span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">星期四</span>&lt;input type="radio" name="timeCheck" value="<span class="s1">星期四</span>"&gt;<span class="Apple-converted-space">   </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">星期五</span>&lt;input type="radio" name="timeCheck" value="<span class="s1">星期五</span>"&gt;<span class="Apple-converted-space">   </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">星期六</span>&lt;input type="radio" name="timeCheck" value="<span class="s1">星期六</span>"&gt; <span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">天数区间</span>&lt;input type="text" name="ftime"&gt;-&lt;input type="text" name="ltime"&gt; <span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- tab-time END --&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div id="tab-service" class="tab-content" style="height: 400px; padding: 0 20px 0 40px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">不限</span>&lt;input type="radio" name="serviceCheck" value="<span class="s1">不限</span>"&gt;<span class="Apple-converted-space">   </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">接机参团</span>&lt;input type="radio" name="serviceCheck" value="<span class="s1">接机参团</span>"&gt;<span class="Apple-converted-space">   </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">本地出发</span>&lt;input type="radio" name="serviceCheck" value="<span class="s1">本地出发</span>"&gt;<span class="Apple-converted-space">   </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">加订酒店</span>&lt;input type="radio" name="serviceCheck" value="<span class="s1">加订酒店</span>"&gt;<span class="Apple-converted-space">   </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">配房服务</span>&lt;input type="radio" name="serviceCheck" value="<span class="s1">配房程度</span>"&gt; <span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- tab-service END --&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div id="tab-discount" class="tab-content" style="height: 400px; padding: 0 20px 0 40px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">不限</span>&lt;input type="radio" name="discountCheck" value="<span class="s1">不限</span>"&gt; <span class="Apple-converted-space">   </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">买二送一</span>&lt;input type="radio" name="discountCheck" value="<span class="s1">买二送一</span>"&gt; <span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">买二送二</span>&lt;input type="radio" name="discountCheck" value="<span class="s1">买二送二</span>"&gt; <span class="Apple-converted-space">   </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">满额返点</span>&lt;input type="radio" name="discountCheck" value="<span class="s1">满额返点</span>"&gt;<span class="Apple-converted-space">   </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">积分返点</span>&lt;input type="radio" name="discountCheck" value="<span class="s1">积分返点</span>"&gt; <span class="Apple-converted-space">   </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">积分兑换</span>&lt;input type="radio" name="discountCheck" value="<span class="s1">积分兑换</span>"&gt; <span class="Apple-converted-space">   </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div style="height: 50px; line-height: 50px;"&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>VIP<span class="s1">特价</span>&lt;input type="radio" name="discountCheck" value="VIP<span class="s1">特价</span>"&gt;<span class="Apple-converted-space">   </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- tab-discount END --&gt;<span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- tab-container END --&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;&lt;!-- container END --&gt;<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;!-- <span class="s1">选择菜单栏结束</span> --&gt;<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span>&lt;/div&gt;<span class="Apple-tab-span">	</span><span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span>&lt;!-- <span class="s1">以上是我的任务</span> --&gt; <span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;?php require_once( "component/download.php" ); ?&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;?php require_once( "component/sidebar.php" ); ?&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="/javascript/header_footer.js"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="/javascript/icheck/icheck.min.js"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>&lt;script type="text/javascript"&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>$(document).ready(function() { <span class="Apple-converted-space"> </span></p>
-<p class="p2"><br></p>
-<p class="p1">// <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>icheck</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>$( "input[name='daysCheck'], input[name='timeCheck'], input[name=serviceCheck], input[name=discountCheck]" ).iCheck( {</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-converted-space">            </span>radioClass : 'iradio_square-pink'</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-converted-space">        </span>} )</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-converted-space">        </span>.on( 'ifChecked', function( event )<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-converted-space">        </span>{</p>
-<p class="p2"><span class="Apple-tab-span">	</span> <span class="Apple-converted-space">           </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-converted-space">        </span>} );</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1">// <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s1">切换</span>tab</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>$(".tab-content").hide();</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>$("ul.tabs li:first").addClass("active").show();</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>$(".tab-content:first").show();</p>
-<p class="p2"><span class="Apple-converted-space">      </span></p>
-<p class="p2"><span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>$("ul.tabs li").click(function() { <span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>$( this ).siblings().removeClass("active").addClass( "normal" );</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>$( this ).removeClass("normal").addClass("active");</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>$(".tab-content").hide();</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var activeTab = $(this).find("a").attr("href");</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>$(activeTab).fadeIn();</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>});</p>
-<p class="p2"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span></p>
-<p class="p2"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span></p>
-<p class="p1">//<span class="Apple-converted-space">          </span><span class="s1">底部点击变化</span><span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>$(".menu-button .button").click( function() {</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span> <span class="Apple-converted-space">   <span class="Apple-tab-span">	</span></span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>$(".bottom-button").hide();</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>$(".background-cover").fadeIn(200);</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>if($(this).attr("for") == "sort") {</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>$(".sort-menu").fadeIn(400);<span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>} else {</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>$(".select-menu").fadeIn(400);</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>}</p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>} );</p>
-<p class="p2"><span class="Apple-tab-span">	</span> <span class="Apple-converted-space">   <span class="Apple-tab-span">	</span></span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>$("#select-cancle, #select-submit, .background-cover").click( function () {</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>$(".sort-menu, .select-menu").fadeOut(400);</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>$(".background-cover").fadeOut(400);</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>$(".bottom-button").show();</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span> <span class="Apple-converted-space">   <span class="Apple-tab-span">	</span></span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>});</p>
-<p class="p2"><span class="Apple-tab-span">	</span> <span class="Apple-converted-space">   <span class="Apple-tab-span">	</span></span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>$(".sort-menu .sort-button").click( function() {</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>$( this ).siblings().removeClass("sort-button-selected").addClass("sort-button");</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>$( this ).removeClass("sort-button").addClass("sort-button-selected");</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>$(".sort-menu").fadeOut(200);</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>$(".background-cover").fadeOut(200);</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>$(".bottom-button").show();</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>});</p>
-<p class="p2"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}); <span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-tab-span">	</span>&lt;/script&gt;<span class="Apple-tab-span">	</span></p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1">&lt;/html&gt;</p>
+
+  <!-- 头部和搜索框 --> 
+  <div class="layer header">
+    <a href="/city-select.php" target="_self"><div class="current-city">纽约</div></a>
+    <div class="sidebar-btn"></div>
+    <div class="search-bar">
+      <div class="search-btn"></div>
+      <div class="search-input"><input type="text"placeholder="城市、景点、团号"></div>      
+    </div>
+  </div>
+  
+  <!-- 面包屑导航 -->
+  <div class="layer bread-crumb-layer">
+    <ol class="list-unstyled bread-crumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+      <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage" href="/">
+          <span property="name">首页</span>
+        </a>
+        <meta property="position" content="1">
+      </li>
+      <li>›</li>
+      <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage" href="/city-select.php"> 
+          <span property="name">城市列表</span>
+        </a>
+        <meta property="position" content="2">
+      </li>
+      <li>›</li>
+      <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage" href="/city/new-york">
+          <span property="name">纽约</span>
+        </a>
+        <meta property="position" content="3"> 
+      </li>
+    </ol>
+  </div>
+
+	<!-- 以下是我的任务 -->  
+	<div>
+			  
+		<!-- 产品列表 -->
+		<div class="productlist" style="">	 
+			<div class="product-tips">		
+				<div class="product-pic" style="height: 180px; background:url(http://website.wannar.com/images/app/city_list/46_m.jpg?v=1) no-repeat; background-size: cover; position: relative;">
+					<div style="position:absolute; top:0; right:15px;"><img src="http://website.wannar.com/images/gui/discount_90.png" width="70%" height="70%"></div>
+					<div class="product-pic-label" style="background-color:#8f8f92; filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;"></div>
+		            <div class="product-pic-label" style="background-color:transparent;">
+			            <div class="pic-words">
+							<span style="padding: 12px 0 10px 10px; float: left; color: white; font-size: 12px;">NY4-20 周二、周三、周五发团</span>
+							<span style="padding: 10px 10px 10px 0; float: right; color: white; font-size: 14px;">纽约出发</span>
+						</div>
+		            </div>            
+				</div><!-- product-tips END -->
+				
+				<div class="product-title" style="height: 30px; margin: 5px; border-bottom: 1px solid #d3d3dd;line-height:30px;font-size:14px;text-align: left;">
+					奥兰多主题乐园任选三日（接送站）
+				</div><!-- product-title END -->
+				
+				<div class="product-info" style="height: 70px; padding-bottom: 2px;display: table;">
+					<div class="product-price-left"style="height: 50px;line-height:50px; text-align: center; color:#ff3573; width: 39%; float: left; border-right: 2px solid #d3d3dd; display: table-cell;">
+						<span style="font-size: 24px;">$113.8<span>
+						<span style="font-size: 10px">/人起</span>
+					</div>
+					<div class="product-price-right" style="height: 60px; width: 60%; float: right; text-align: left;">
+						<div style="padding:2px 8px;">
+			               	<div style="font-size: 4px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">接机</div>
+			                <div style="font-size: 4px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">配房</div>
+			                <div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">二送一</div>
+			                <div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">返点</div>
+			                <div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">兑换</div>
+						</div>
+		            </div>
+				</div><!-- product-info END --> 
+			</div><!-- product-tips END -->
+			
+			<div class="product-tips" style="height: 280px; text-align: center; margin: 0 15px 10px 15px ; background-color: white;">		
+				<div class="product-pic" style="height: 180px; background:url(http://website.wannar.com/images/app/city_list/46_m.jpg?v=1) no-repeat; background-size: cover; position: relative;">
+					<div style="position:absolute; top:0; right:15px;"><img src="http://website.wannar.com/images/gui/discount_90.png" width="70%" height="70%"></div>
+					<div class="product-pic-label" style="height: 35px; position: absolute; left:0; width:100%; bottom: 0; background-color:#8f8f92;
+		filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;"></div>
+		            <div class="product-pic-label" style="height: 35px; position: absolute; left:0; width:100%; bottom: 0; background-color:transparent;">
+			            <div class="pic-words">
+							<span style="padding: 12px 0 10px 10px; float: left; color: white; font-size: 12px;">NY4-20 周二、周三、周五发团</span>
+							<span style="padding: 10px 10px 10px 0; float: right; color: white; font-size: 14px;">纽约出发</span>
+						</div>
+		            </div>            
+				</div><!-- product-tips END -->
+				
+				<div class="product-title" style="height: 30px; margin: 5px; border-bottom: 1px solid #d3d3dd;line-height:30px;font-size:14px;text-align: left;">
+					奥兰多主题乐园任选三日（接送站）
+				</div><!-- product-title END -->
+				
+				<div class="product-info" style="height: 70px; padding-bottom: 2px;display: table;">
+					<div class="product-price-left"style="height: 50px;line-height:50px; text-align: center; color:#ff3573; width: 39%; float: left; border-right: 2px solid #d3d3dd; display: table-cell;">
+						<span style="font-size: 24px;">$113.8<span>
+						<span style="font-size: 10px">/人起</span>
+					</div>
+					<div class="product-price-right" style="height: 60px; width: 60%; float: right; text-align: left;">
+						<div style="padding:2px 8px;">
+			               	<div style="font-size: 4px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">接机</div>
+			                <div style="font-size: 4px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">配房</div>
+			                <div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">二送一</div>
+			                <div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">返点</div>
+			                <div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">兑换</div>
+						</div>
+		            </div>
+				</div><!-- product-info END --> 
+			</div><!-- product-tips END -->
+			
+			<div class="product-tips" style="height: 280px; text-align: center; margin: 0 15px 10px 15px ; background-color: white;">		
+				<div class="product-pic" style="height: 180px; background:url(http://website.wannar.com/images/app/city_list/46_m.jpg?v=1) no-repeat; background-size: cover; position: relative;">
+					<div style="position:absolute; top:0; right:15px;"><img src="http://website.wannar.com/images/gui/discount_90.png" width="70%" height="70%"></div>
+					<div class="product-pic-label" style="height: 35px; position: absolute; left:0; width:100%; bottom: 0; background-color:#8f8f92;
+		filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;"></div>
+		            <div class="product-pic-label" style="height: 35px; position: absolute; left:0; width:100%; bottom: 0; background-color:transparent;">
+			            <div class="pic-words">
+							<span style="padding: 12px 0 10px 10px; float: left; color: white; font-size: 12px;">NY4-20 周二、周三、周五发团</span>
+							<span style="padding: 10px 10px 10px 0; float: right; color: white; font-size: 14px;">纽约出发</span>
+						</div>
+		            </div>            
+				</div><!-- product-tips END -->
+				
+				<div class="product-title" style="height: 30px; margin: 5px; border-bottom: 1px solid #d3d3dd;line-height:30px;font-size:14px;text-align: left;">
+					奥兰多主题乐园任选三日（接送站）
+				</div><!-- product-title END -->
+				
+				<div class="product-info" style="height: 70px; padding-bottom: 2px;display: table;">
+					<div class="product-price-left"style="height: 50px;line-height:50px; text-align: center; color:#ff3573; width: 39%; float: left; border-right: 2px solid #d3d3dd; display: table-cell;">
+						<span style="font-size: 24px;">$113.8<span>
+						<span style="font-size: 10px">/人起</span>
+					</div>
+					<div class="product-price-right" style="height: 60px; width: 60%; float: right; text-align: left;">
+						<div style="padding:2px 8px;">
+			               	<div style="font-size: 4px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">接机</div>
+			                <div style="font-size: 4px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">配房</div>
+			                <div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">二送一</div>
+			                <div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">返点</div>
+			                <div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">兑换</div>
+						</div>
+		            </div>
+				</div><!-- product-info END --> 
+			</div><!-- product-tips END -->
+			
+			<div class="product-tips" style="height: 280px; text-align: center; margin: 0 15px 10px 15px ; background-color: white;">		
+				<div class="product-pic" style="height: 180px; background:url(http://website.wannar.com/images/app/city_list/46_m.jpg?v=1) no-repeat; background-size: cover; position: relative;">
+					<div style="position:absolute; top:0; right:15px;"><img src="http://website.wannar.com/images/gui/discount_90.png" width="70%" height="70%"></div>
+					<div class="product-pic-label" style="height: 35px; position: absolute; left:0; width:100%; bottom: 0; background-color:#8f8f92;
+		filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;"></div>
+		            <div class="product-pic-label" style="height: 35px; position: absolute; left:0; width:100%; bottom: 0; background-color:transparent;">
+			            <div class="pic-words">
+							<span style="padding: 12px 0 10px 10px; float: left; color: white; font-size: 12px;">NY4-20 周二、周三、周五发团</span>
+							<span style="padding: 10px 10px 10px 0; float: right; color: white; font-size: 14px;">纽约出发</span>
+						</div>
+		            </div>            
+				</div><!-- product-tips END -->
+				
+				<div class="product-title" style="height: 30px; margin: 5px; border-bottom: 1px solid #d3d3dd;line-height:30px;font-size:14px;text-align: left;">
+					奥兰多主题乐园任选三日（接送站）
+				</div><!-- product-title END -->
+				
+				<div class="product-info" style="height: 70px; padding-bottom: 2px;display: table;">
+					<div class="product-price-left"style="height: 50px;line-height:50px; text-align: center; color:#ff3573; width: 39%; float: left; border-right: 2px solid #d3d3dd; display: table-cell;">
+						<span style="font-size: 24px;">$113.8<span>
+						<span style="font-size: 10px">/人起</span>
+					</div>
+					<div class="product-price-right" style="height: 60px; width: 60%; float: right; text-align: left;">
+						<div style="padding:2px 8px;">
+			               	<div style="font-size: 4px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">接机</div>
+			                <div style="font-size: 4px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">配房</div>
+			                <div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">二送一</div>
+			                <div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">返点</div>
+			                <div style="font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;">兑换</div>
+						</div>
+		            </div>
+				</div><!-- product-info END --> 
+			</div><!-- product-tips END -->
+		</div><!-- productlist END --> 
+		<!-- 产品列表结束 -->
+  
+  		<!-- 底部的筛选排序按钮 -->
+
+		<div class="menu-cover" style="height: 40px; position: fixed; left: 0; width: 100%; bottom: 0; background-color: #ff3573; filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8; background-color: #ff3573;"></div>
+		<div class="menu-cover" style="height: 40px; position: fixed; left: 0; width: 100%; bottom: 0; background-color: transparent;">
+			<div class="menu-button">
+				<div class="button" for="select" style="height: 40px; line-height: 40px; width: 50%; float: left; color: white; font-size: 20px; text-align: center; border-right: 2px white solid;">筛选</div>
+				<div class="button" for="sort" style="height: 40px; line-height:40px; width: 49%; float: right; color: white; font-size: 20px; text-align: center;">排序</div>
+			</div>
+		</div>
+
+		<!-- 底部的筛选排序按钮结束 -->
+	
+		<div class="background-cover"></div>
+		<!-- 排序的菜单栏 -->
+		<div class="sort-menu">			
+			<div class="sort-button" style="height: 60px; line-height: 60px; border-bottom: 1px solid grey;">天数从低到高</div>
+			<div class="sort-button" style="height: 60px; line-height: 60px; border-bottom: 1px solid grey;">天数从高到低</div>
+			<div class="sort-button" style="height: 60px; line-height: 60px; border-bottom: 1px solid grey;">价格从低到高</div>
+			<div class="sort-button" style="height: 60px; line-height: 60px;">价格从高到低</div>			
+		</div>
+		<!-- 排序的菜单栏结束 -->		
+
+		<!-- 选择菜单栏 --> 
+		<div class="select-menu">	
+			<div class="select-menu-top" style="height: 60px; border-bottom: 1px solid grey;">
+				<table style="width: 100%; font-size: 28px; padding: 0 20px;">
+					<tr>
+						<td id="select-cancle" style="height: 58px; width: 30%;">取消</td> 
+						<td style="height: 58px; width: 40%; text-align: center;"><img src="/img/task/reload.png" height="25"; width="25">重置</td>
+						<td id="select-submit" style="height: 58px; width: 30%; text-align: right; color: #ff3573">确定</td>
+					</tr>
+				</table>
+			</div><!-- select-menu-top END -->
+				
+			<div class="container" style="overflow: auto;">	
+				<ul class="tabs">
+					<li class="active"><a href="#tab-days"><img src="/img/task/days.png" height="100"; width="100"></a></li>
+					<li class="normal"><a href="#tab-time"><img src="/img/task/time.png" height="100"; width="100"></a></li>
+					<li class="normal"><a href="#tab-service"><img src="/img/task/service.png" height="100"; width="100"></a></li>
+					<li class="normal"><a href="#tab-discount"><img src="/img/task/discount.png" height="100"; width="100"></a></li>
+				</ul>
+					
+				<div class="tab-container" style="width: 80%; float: right; font-size: 18px;">							
+					<div id="tab-days" class="tab-content" style="height: 400px; padding: 0 20px 0 40px;">
+						<div style="height: 50px; line-height: 50px;">
+							不限<input type="radio" name="daysCheck" value="不限" checked="checked"> 
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							一天<input type="radio" name="daysCheck" value="一天">
+						</div> 
+						<div style="height: 50px; line-height: 50px;">
+							两天<input type="radio" name="daysCheck" value="两天"> 
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							三天<input type="radio" name="daysCheck" value="三天">  
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							四天<input type="radio" name="daysCheck" value="四天"> 
+						</div> 
+						<div style="height: 50px; line-height: 50px;">
+							五天<input type="radio" name="daysCheck" value="五天"> 
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							六天<input type="radio" name="daysCheck" value="六天"> 
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							天数区间<input type="text" name="fday">-<input type="text" name="lday">  
+						</div>
+					</div><!-- tab-days END -->
+						
+					<div id="tab-time" class="tab-content" style="height: 400px; padding: 0 20px 0 40px;">
+						<div style="height: 50px; line-height: 50px;">
+							不限<input type="radio" name="timeCheck" value="不限">   
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							星期一<input type="radio" name="timeCheck" value="星期一">  
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							星期二<input type="radio" name="timeCheck" value="星期二">   
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							星期三<input type="radio" name="timeCheck" value="星期三">  
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							星期四<input type="radio" name="timeCheck" value="星期四">   
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							星期五<input type="radio" name="timeCheck" value="星期五">   
+						</div>
+						<div style="height: 50px; line-height: 50px;"> 
+							星期六<input type="radio" name="timeCheck" value="星期六">  
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							天数区间<input type="text" name="ftime">-<input type="text" name="ltime">  
+						</div>
+					</div><!-- tab-time END -->
+						
+					<div id="tab-service" class="tab-content" style="height: 400px; padding: 0 20px 0 40px;">
+						<div style="height: 50px; line-height: 50px;">
+							不限<input type="radio" name="serviceCheck" value="不限">   
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							接机参团<input type="radio" name="serviceCheck" value="接机参团">   
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							本地出发<input type="radio" name="serviceCheck" value="本地出发">   
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							加订酒店<input type="radio" name="serviceCheck" value="加订酒店">   
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							配房服务<input type="radio" name="serviceCheck" value="配房程度">  
+						</div> 
+					</div><!-- tab-service END -->
+						
+					<div id="tab-discount" class="tab-content" style="height: 400px; padding: 0 20px 0 40px;">
+						<div style="height: 50px; line-height: 50px;">
+							不限<input type="radio" name="discountCheck" value="不限">    
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							买二送一<input type="radio" name="discountCheck" value="买二送一">  
+						</div> 
+						<div style="height: 50px; line-height: 50px;">
+							买二送二<input type="radio" name="discountCheck" value="买二送二">    
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							满额返点<input type="radio" name="discountCheck" value="满额返点">   
+						</div> 
+						<div style="height: 50px; line-height: 50px;">
+							积分返点<input type="radio" name="discountCheck" value="积分返点">    
+						</div>
+						<div style="height: 50px; line-height: 50px;">
+							积分兑换<input type="radio" name="discountCheck" value="积分兑换">    
+						</div>
+						<div style="height: 50px; line-height: 50px;"> 
+							VIP特价<input type="radio" name="discountCheck" value="VIP特价">   
+						</div> 
+					</div><!-- tab-discount END -->	
+				</div><!-- tab-container END -->
+			</div><!-- container END -->				
+		</div>
+		<!-- 选择菜单栏结束 -->					
+	</div>	 
+	<!-- 以上是我的任务 -->  
+  <?php require_once( "component/download.php" ); ?>
+  
+  <?php require_once( "component/sidebar.php" ); ?>
+  
+  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/javascript/header_footer.js"></script>
+  <script src="/javascript/icheck/icheck.min.js"></script>
+	<script type="text/javascript">
+			
+		$(document).ready(function() {  
+
+// 			icheck
+			$( "input[name='daysCheck'], input[name='timeCheck'], input[name=serviceCheck], input[name=discountCheck]" ).iCheck( {
+	            radioClass : 'iradio_square-pink'
+	        } )
+	        .on( 'ifChecked', function( event ) 
+	        {
+	            
+	        } );
+			
+// 			切换tab
+			$(".tab-content").hide();
+			$("ul.tabs li:first").addClass("active").show();
+			$(".tab-content:first").show();
+      
+ 
+			$("ul.tabs li").click(function() {  
+				$( this ).siblings().removeClass("active").addClass( "normal" );
+				$( this ).removeClass("normal").addClass("active");
+				$(".tab-content").hide();
+				
+				var activeTab = $(this).find("a").attr("href");
+				$(activeTab).fadeIn();
+
+    		});
+    		
+    		
+//          底部点击变化 
+    		$(".menu-button .button").click( function() {
+		    	
+		    	$(".bottom-button").hide();
+		    	$(".background-cover").fadeIn(200);
+		    	if($(this).attr("for") == "sort") {
+			    	$(".sort-menu").fadeIn(400);	
+		    	} else {
+			    	$(".select-menu").fadeIn(400);
+		    	}
+
+
+	    	} );
+	    	
+	    	$("#select-cancle, #select-submit, .background-cover").click( function () {
+		 
+		    	$(".sort-menu, .select-menu").fadeOut(400);
+		    	$(".background-cover").fadeOut(400);
+		    	$(".bottom-button").show();
+		    	
+	    	});
+	    	
+	    	$(".sort-menu .sort-button").click( function() {
+		    	$( this ).siblings().removeClass("sort-button-selected").addClass("sort-button");
+		    	$( this ).removeClass("sort-button").addClass("sort-button-selected");
+		    	$(".sort-menu").fadeOut(200);
+		    	$(".background-cover").fadeOut(200);
+		    	$(".bottom-button").show();
+	    	});
+    		
+		});  
+	</script>	
+
+
 </body>
+  
 </html>
