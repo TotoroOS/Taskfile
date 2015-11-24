@@ -19,39 +19,66 @@
   <link rel="shortcut icon" href="http://website.wannar.com/images/logo/wannar_16.ico">
   
   <link rel="stylesheet" href="http://m.wannar.com/css/header_footer.css">
-  
-  <link rel="stylesheet" href="/javascript/icheck/skins/all.css">
 
+  
+  <style type="text/css">
+
+	  body{ margin: 0; padding: 0;}
+  	/* 第一个标签 */
+	  .certificates-title{border-radius: 5px; height: 200px; margin: 10px; padding: 5px 5px 15px 5px; background-color: white;}
+	  .certificates-details{width: 100px;height: 30px;}
+	/* 出行人员 */
+	  .certificates-travel-people{border-radius: 5px; height: 200px; margin: 10px; padding: 5px 5px 15px 5px; background-color: white;}
+	  .certificates-travel-people div{padding:5px;}
+	  .people-num{color: #ff3573; width: 30px; height: 30px;}
+	  .people-name{width: 150px;}
+	/* 行程内容 */
+	  .certificates-scheduling-routing{border-radius: 5px; height: 400px; margin: 10px; padding: 5px 5px 15px 5px; background-color: white;}
+	  .certificates-scheduling-routing div{padding:5px;}
+	  .guide-line{position: absolute; top: 0 left: 0; border-right: 2px solid #e2e2e2; z-index: 0; height: 300px;}
+	/* 其他 */	  
+	  .certificates-travel-remarks{border-radius: 5px; height: 380px; margin: 10px; padding: 15px 5px; background-color: white;}
+	  .certificates-travel-remarks div{padding:5px; line-height: 30px;}
+	  .certificates-travel-remarks div span{color: red;}
+	/* 最下方的表格 */
+	  .certificates-table{margin: 10px; text-align: center;}
+	  .certificates-table  table{width: 100%; border: 0px solid grey;}
+	  #table-th{background-color:#e9edf6;}
+	  #table-td{background-color: white;}
+	  .slogan{width: 60%; margin: 0 auto; padding: 15px;}
+	  .slogan div{height: 100px; background: url(../img/task/slogan.png) no-repeat; background-size: contain; position: relative}
+
+  </style>
 
 </head>
 
 <body>
   
 	<div class="electronic-certificates">
-		<div class="certificates-title" style="border-radius: 5px; height: 200px; margin: 10px; padding: 5px 5px 15px 5px; background-color: white;">
+		<div class="certificates-title">
 			<h2>纽约一日游，自由女神、帝国大厦、华尔街，纽约市区特色一日游</h2>
 			<hr>
 			<div>
 				<table>
 				<tr>
-					<th style="width: 100px;height: 30px;">出发时间：</th>
+					<th class="certificates-details">出发时间：</th>
 					<td>2015-11-11</td>
 				</tr>
 				<tr>
-					<th style="width: 100px;height: 30px;">地接公司：</th>
+					<th class="certificates-details">地接公司：</th>
 					<td>纵横旅游East Coast Holiday</td>
 				</tr>
 				<tr>
-					<th style="width: 100px;height: 30px;">上车地点：</th>
+					<th class="certificates-details">上车地点：</th>
 					<td>7:00am 13330 39th Ave,Flushing,NY 11354（法拉盛-敦城海鲜酒家门口）</td>
 				</tr>
 				</table>
 			</div>
 		</div>   
-		<div class="certificates-travel-people" style="border-radius: 5px; height: 200px; margin: 10px; padding: 5px 5px 15px 5px; background-color: white;">
+		<div class="certificates-travel-people">
 			<h2>出行人员</h2>
 			<hr>
-			<div style="padding:5px;">
+			<div>
 				<table>
 					<tr>
 						<td>成人/Adult:</td>
@@ -62,23 +89,23 @@
 				</table>
 				<table>
 					<tr>
-						<td style="color: #ff3573; width: 30px; height: 30px;">①</td>
-						<td style="width: 150px">Ling Guo</td>
+						<td class="people-num">①</td>
+						<td class="people-name">Ling Guo</td>
 						<td>女</td>
 					</tr>
 					<tr>
-						<td style="color: #ff3573; width: 30px; height: 30px;">②</td>
-						<td style="width: 150px">Xiaoping Wang</td>
+						<td class="people-num">②</td>
+						<td class="people-name">Xiaoping Wang</td>
 						<td>女</td>
 					</tr>
 				</table>
 			</div>	
 		</div>	
-		<div class="certificates-scheduling-routing" style="border-radius: 5px; height: 400px; margin: 10px; padding: 5px 5px 15px 5px; background-color: white;">
+		<div class="certificates-scheduling-routing">
 			<h2>行程内容</h2>
 			<hr>
-			<div style="padding:5px;">
-				<div class="guide-line" style="position: absolute; top: 0 left: 0; border-right: 2px solid #e2e2e2; z-index: 0; height: 300px;"></div>
+			<div>
+				<div class="guide-line"></div>
 				<div class='layer'>
 					<div class='icon assembly'></div>
 					<div class='subcontent'></div>
@@ -86,31 +113,31 @@
 			</div>	
 
 		</div>	
-		<div class="certificates-travel-remarks" style="border-radius: 5px; height: 380px; margin: 10px; padding: 15px 5px; background-color: white;">
+		<div class="certificates-travel-remarks">
 			<h2>紧急联系方式</h2>
 			<hr>
-			<div style="padding:5px; line-height: 30px;">
-			如有紧急情况，请及时拨打【纵横旅游】当日紧急联系电话：<span style="color: red">1（866）585-8747</span>。您也可以拨打玩哪儿旅行客户服务电话<span style="color: red">1（866）928-2988</span>（美西时间周一至周五09:00-23:00）获取帮助。
+			<div>
+			如有紧急情况，请及时拨打【纵横旅游】当日紧急联系电话：<span>1（866）585-8747</span>。您也可以拨打玩哪儿旅行客户服务电话<span>1（866）928-2988</span>（美西时间周一至周五09:00-23:00）获取帮助。
 			</div>
 			<h2>本地接送条款</h2>
 			<hr>
-			<div style="padding:5px; line-height: 30px;">
-			请提早10分钟在制定上车地点等候“金泉旅游”的巴士。金泉旅游当日紧急联络电话：<span style="color: red">718-939-5090/646-773-0302</span>.or玩哪儿客服（Wannar）:<span style="color: red">1-855-888-0088</span>（美西时间周一至周五09:00AM-5:30PM）	
+			<div>
+			请提早10分钟在制定上车地点等候“金泉旅游”的巴士。金泉旅游当日紧急联络电话：<span>718-939-5090/646-773-0302</span>.or玩哪儿客服（Wannar）:<span>1-855-888-0088</span>（美西时间周一至周五09:00AM-5:30PM）	
 			</div>
 		</div>		
-		<div class="certificates-table" style="margin: 10px; text-align: center;">
-			<table width="100%" style="border: 0px solid grey">
-				<tr style="background-color:#e9edf6;">
+		<div class="certificates-table">
+			<table>
+				<tr id="table-th">
 					<th>订单号码</th>
 					<th>订购时间</th>
-	  			<tr style="background-color: white;">
+	  			<tr id="table-td">
 		  			<td>SA15110832786</td>
 		  			<td>2015-11-08 07:30:31</td>
 	  			</tr>
 			</table>
 		</div>
-		<div class="slogan" style="padding: 15px 70px;">
-			<div style=" width: 100%; height: 200px; background: url(img/task/222_03.png) no-repeat; background-size: percentage; position: relative;"></div>	
+		<div class="slogan">
+			<div></div>
 		</div>		
 	</div>
   
@@ -121,17 +148,6 @@
   
   <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
   <script src="/javascript/header_footer.js"></script>
-  <script src="/javascript/icheck/icheck.min.js"></script>
-	<script type="text/javascript">
-			
-		$(document).ready(function() {  
-
-
-    	});  
-    		 
-		});  
-	</script>	
-
 
 </body>
   
