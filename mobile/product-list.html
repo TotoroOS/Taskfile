@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="applicable-device"content="mobile">
+  <meta name="applicable-device" content="mobile">
   <meta name="format-detection" content="telephone=no">
   
   <link rel="icon" href="http://website.wannar.com/images/logo/wannar_16.ico" type="image/ico">
@@ -20,7 +20,7 @@
   
   <link rel="stylesheet" href="http://m.wannar.com/css/header_footer.css">
   
-  <link rel="stylesheet" href="/javascript/icheck/skins/all.css">
+  <link rel="stylesheet" href="../javascript/icheck/skins/all.css">
 	
 	<style type="text/css">
 		body{ padding: 0; margin: 0;}
@@ -29,11 +29,11 @@
 		.select-menu{display: none; position: fixed; left: 0; bottom: 0; z-index: 3; width: 100%; height: 450px; background-color: #fafbfd; font-size: 20px; color: grey;}
 		.sort-menu{display: none; position: fixed; left: 0; bottom: 0; z-index: 3; width: 100%; height: 200px; background-color: #fafbfd; text-align: center; font-size: 20px; color: grey;}
 		/* 产品列表 */   
-		.product-tips{height: 280px; text-align: center; margin: 0 15px 10px 15px ; background-color: white;}
+		.product-tips{height: 280px; text-align: center; margin: 0 10px 10px 10px ; background-color: white;}
 		
 		.product-pic{height: 180px; background:url(http://website.wannar.com/images/app/city_list/46_m.jpg?v=1) no-repeat; background-size: cover; position: relative;}
 		.product-pic-tag{position:absolute; top:0; right:15px;}
-		.product-pic-tag img{width: 70%; height: 70%}		
+		.product-pic-tag img{width: 70%; height: 70%;}
 		.product-pic-label-cover, .product-pic-label-uncover{height: 35px; position: absolute; left:0; width:100%; bottom: 0;}
 		.product-pic-label-cover{background-color:#8f8f92; filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;}
 		.product-pic-label-uncover{background-color:transparent;}
@@ -44,17 +44,17 @@
 		.product-title{height: 30px; margin: 5px; border-bottom: 1px solid #d3d3dd;line-height:30px;font-size:14px;text-align: left;}
 		
 		.product-info{height: 70px; padding-bottom: 2px; display: table;}
-		.product-price-left{height: 50px;line-height:50px; text-align: center; color:#ff3573; width: 39%; float: left; border-right: 2px solid #d3d3dd; display: table-cell;}
+		.product-price-left{height: 50px; line-height:50px; text-align: center; color:#ff3573; width: 39%; float: left; border-right: 2px solid #d3d3dd; display: table-cell;}
 		.product-price-left span[for=price]{font-size: 24px;}
 		.product-price-left span[for=unit]{font-size: 10px;}
 		.product-price-right{height: 60px; width: 60%; float: right; text-align: left;}
 		.product-price-right div{padding:2px 8px;}
-		.product-service-tag[color=purple]{font-size: 4px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;}
-		.product-service-tag[color=yellow]{font-size: 4px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;}
+		.product-service-tag[color=purple]{font-size: 10px; border: 1px solid #a462ff; color: #a462ff; padding: 3px 6px; margin-bottom: 6px; display:inline-block;}
+		.product-service-tag[color=yellow]{font-size: 10px; border: 1px solid #ffac62; color: #ffac62; padding: 3px 6px; margin-bottom: 6px; display:inline-block;}
 		
 		/* 底部透明按钮 */ 
 		.menu-cover, .menu-uncover{height: 40px; position: fixed; left: 0; width: 100%; bottom: 0;}
-		.menu-cover{background-color: #ff3573; filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8; background-color: #ff3573;}
+		.menu-cover{background-color: #ff3573; filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;}
 		.menu-uncover{background-color: transparent;}
 		.button{height: 40px; line-height: 40px; color: white; font-size: 18px; text-align: center;}
 		.button[for=select]{width: 50%; float: left;  border-right: 2px white solid;}
@@ -76,7 +76,7 @@
 		.tab-content{height: 370px; padding: 15px;}
 		.select-line{height: 45px; line-height: 45px;}
 		.select-line-radio{float: right;}
-		.select-line-radio input{width: 20px; size=20px;}
+		.select-line-radio input{width: 20px; size: 20px;}
 		  
 		ul.tabs{width: 20%; float: left; list-style: none; padding: 0; height: 400px; margin:0; text-align: center;}
 		ul.tabs li.normal, ul.tabs li.active{height: 100px; width: 100%;}
@@ -92,11 +92,11 @@
 
   <!-- 头部和搜索框 -->  
   <div class="layer header">
-    <a href="/city-select.php" target="_self"><div class="current-city">纽约</div></a> 
+    <a href="/city-select.php" target="_self"><div class="current-city">纽约</div></a>
     <div class="sidebar-btn"></div>
     <div class="search-bar">
       <div class="search-btn"></div>
-      <div class="search-input"><input type="text"placeholder="城市、景点、团号"></div>       
+      <div class="search-input"><input type="text" placeholder="城市、景点、团号"></div>
     </div>
   </div>
   
@@ -111,14 +111,14 @@
       </li>
       <li>›</li>
       <li property="itemListElement" typeof="ListItem">
-        <a property="item" typeof="WebPage" href="/city-select.php"> 
+        <a property="item" typeof="WebPage" href="/city-select.php">
           <span property="name">城市列表</span> 
         </a>
         <meta property="position" content="2">
       </li>
       <li>›</li>
       <li property="itemListElement" typeof="ListItem">
-        <a property="item" typeof="WebPage" href="/city/new-york">
+        <a property="item" typeof="WebPage" href="/city/new-york.php">
           <span property="name">纽约</span> 
         </a>
         <meta property="position" content="3"> 
@@ -130,7 +130,7 @@
 	<div>
 			  
 		<!-- 产品列表 --> 
-		<div class="productlist">	 
+
 			<div class="product-tips">		
 				<div class="product-pic">
 					<div class="product-pic-tag"><img src="http://website.wannar.com/images/gui/discount_90.png"></div>
@@ -229,27 +229,26 @@
 		            </div>
 				</div><!-- product-info END --> 
 			</div><!-- product-tips END -->
-			
-			
-		</div><!-- productlist END --> 
+
 		<!-- 产品列表结束 -->  
   
   		<!-- 底部的筛选排序按钮 -->
 
-		<div class="menu-cover"></div>
-		<div class="menu-uncover">
-			<div class="menu-button">
-				<div class="button" for="select">筛选</div>  
-				<div class="button" for="sort">排序</div>
+		<div class="menu-bottom">
+			<div class="menu-cover"></div>
+			<div class="menu-uncover">
+				<div class="menu-button">
+					<div class="button" for="select">筛选</div>
+					<div class="button" for="sort">排序</div>
+				</div>
 			</div>
 		</div>
-
 		<!-- 底部的筛选排序按钮结束 -->  
 	
 		<div class="background-cover"></div>
 		<!-- 排序的菜单栏 -->  
 		<div class="sort-menu">			
-			<div class="sort-button">天数从低到高</div>
+			<div class="sort-button sort-button-selected">天数从低到高</div>
 			<div class="sort-button">天数从高到低</div>  
 			<div class="sort-button">价格从低到高</div>
 			<div class="sort-button">价格从高到低</div>  			
@@ -262,7 +261,7 @@
 				<table style="">
 					<tr>
 						<td id="select-cancle">取消</td>   
-						<td id="select-reset"><img src="/img/task/reload.png">重置</td>
+						<td id="select-reset"><img src="../img/task/reload.png">重置</td>
 						<td id="select-submit">确定</td>   
 					</tr>
 				</table>
@@ -270,10 +269,10 @@
 				
 			<div class="container" style="overflow: auto;">	
 				<ul class="tabs">
-					<li class="active"><a href="#tab-days"><img class="tabs-img" src="/img/task/days.png"></a></li>
-					<li class="normal"><a href="#tab-time"><img class="tabs-img" src="/img/task/time.png"></a></li>
-					<li class="normal"><a href="#tab-service"><img class="tabs-img" src="/img/task/service.png"></a></li>
-					<li class="normal"><a href="#tab-discount"><img class="tabs-img" src="/img/task/discount.png"></a></li>
+					<li class="active"><a href="#tab-days"><img class="tabs-img" src="../img/task/days.png"></a></li>
+					<li class="normal"><a href="#tab-time"><img class="tabs-img" src="../img/task/time.png"></a></li>
+					<li class="normal"><a href="#tab-service"><img class="tabs-img" src="../img/task/service.png"></a></li>
+					<li class="normal"><a href="#tab-discount"><img class="tabs-img" src="../img/task/discount.png"></a></li>
 				</ul>
 					
 				<div class="tab-container">							
@@ -386,69 +385,51 @@
   <script src="/javascript/header_footer.js"></script>
   <script src="/javascript/icheck/icheck.min.js"></script>
 	<script type="text/javascript">
-			
-		$(document).ready(function() {  
+		$(document).ready(function() {
 
-// 			icheck
-			$( "input[name='daysCheck'], input[name='timeCheck'], input[name=serviceCheck], input[name=discountCheck]" ).iCheck( {
-	            radioClass : 'iradio_square-pink'
-	        } )
-	        .on( 'ifChecked', function( event ) 
-	        {
-	            
-	        } );
-			
-// 			切换tab  
+			$(".menu-button .button").click( function(){
+				$(".menu-bottom").hide();
+				$(".background-cover").fadeIn(200);
+				if($(this).attr("for") == "sort") {
+					$(".sort-menu").fadeIn(400);
+				} else {
+					$(".select-menu").fadeIn(400);
+				}
+			});
+
+			$("#select-cancle, #select-submit, .background-cover").click( function (){
+
+				$(".background-cover").fadeOut(400);
+				$(".select-menu, .sort-menu").fadeOut(400);
+				$(".menu-bottom").show();
+			});
+
+			$(".sort-menu .sort-button").click( function() {
+				$( this ).siblings().removeClass("sort-button-selected").addClass("sort-button");
+				$( this ).removeClass("sort-button").addClass("sort-button-selected");
+				$(".sort-menu").fadeOut(200);
+				$(".background-cover").fadeOut(200);
+				$(".menu-bottom").show();
+			});
+
 			$(".tab-content").hide();
 			$("ul.tabs li:first").addClass("active").show();
 			$(".tab-content:first").show();
-      
- 
-			$("ul.tabs li").click(function() {  
+
+
+			$("ul.tabs li").click(function() {
+
 				$( this ).siblings().removeClass("active").addClass( "normal" );
 				$( this ).removeClass("normal").addClass("active");
 				$(".tab-content").hide();
-				
+
 				var activeTab = $(this).find("a").attr("href");
 				$(activeTab).fadeIn();
 
-    		});
-    		
-    	
-//          底部点击变化   
-    		$(".menu-button .button").click( function() {
-		    	
-		    	$(".bottom-button").hide();
-		    	$(".background-cover").fadeIn(200);
-		    	if($(this).attr("for") == "sort") {
-			    	$(".sort-menu").fadeIn(400);	
-		    	} else {
-			    	$(".select-menu").fadeIn(400);
-		    	}
+			});
+		});
 
-
-	    	} );
-	    	
-	    	$("#select-cancle, #select-submit, .background-cover").click( function () {
-		 
-		    	$(".sort-menu, .select-menu").fadeOut(400);
-		    	$(".background-cover").fadeOut(400);
-		    	$(".bottom-button").show();
-		    	
-	    	});
-	    	
-	    	$(".sort-menu .sort-button").click( function() {
-		    	$( this ).siblings().removeClass("sort-button-selected").addClass("sort-button");
-		    	$( this ).removeClass("sort-button").addClass("sort-button-selected");
-		    	$(".sort-menu").fadeOut(200);
-		    	$(".background-cover").fadeOut(200);
-		    	$(".bottom-button").show();
-	    	});
-    		
-		});  
-	</script>	
-
-
+	</script>
 </body>
-  
+
 </html>
